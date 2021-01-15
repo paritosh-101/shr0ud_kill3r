@@ -9,10 +9,10 @@ land; and urban land, which are images majorly showing rooftops, roadways, narro
 paths, boundaries etc. This gave us ~2, 000 images per class.
 
 ![barren land](Images/barren.png)<br />
-*barren land*
-![grassland](Images/grass.png)
+*barren land*<br />
+![grassland](Images/grass.png)<br />
 ![grassland](Images/grass2.png)<br />
-*grasslands*
+*grasslands*<br />
 
 As can be seen from the images, the model learns and generates images with
 a smaller number of features (barren land, grassland) easily, but highly complex
@@ -20,6 +20,6 @@ images i.e., images with a greater number of features or information per unit ar
 such as urban areas and agricultural land, have not been learnt accurately.
 
 ![urban](Images/urban.png)<br />
-*urban areas*
+*urban areas*<br />
 ![agri](Images/agri.png)<br />
-*agricultural land (grid type)*
+*agricultural land (grid type)*<br />

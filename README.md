@@ -1,6 +1,8 @@
 # shr0ud_kill3r
 Generative model to produce optical satellite images from SAR images.
 
+**Latest, best results**
+
 We selected ~12,000 images, evenly distributed over 4 different types of major
 terrain/regions. Barren land, further divided into 2 classes, pure barren land and
 mixture of barren and urban land; grasslands, further divided into 2 classes, pure

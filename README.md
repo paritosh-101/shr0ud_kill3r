@@ -8,10 +8,10 @@ grasslands and a mixture of grasslands and urban areas; grid, which is agricultu
 land; and urban land, which are images majorly showing rooftops, roadways, narrow
 paths, boundaries etc. This gave us ~2, 000 images per class.
 
-![barren land](Images/barren.png)
+![barren land](Images/barren.png)<br />
 *barren land*
 ![grassland](Images/grass.png)
-![grassland](Images/grass2.png)
+![grassland](Images/grass2.png)<br />
 *grasslands*
 
 As can be seen from the images, the model learns and generates images with
@@ -19,7 +19,7 @@ a smaller number of features (barren land, grassland) easily, but highly complex
 images i.e., images with a greater number of features or information per unit area,
 such as urban areas and agricultural land, have not been learnt accurately.
 
-![urban](Images/urban.png)
+![urban](Images/urban.png)<br />
 *urban areas*
-![agri](Images/agri.png)
+![agri](Images/agri.png)<br />
 *agricultural land (grid type)*

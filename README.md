@@ -11,7 +11,7 @@ We decided to segregate the data into four classes and then train separate condi
 
 ## Results
 
-Composite model outputs, in order: __Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)__
+Composite model (SAR classifier + cGAN) outputs, in order: __Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)__
 
 ### Barren Land
 
@@ -36,3 +36,21 @@ Composite model outputs, in order: __Sentinel-1 SAR (input), Generated (output),
 ![SAR](/images/urban1_1.png) ![Generated](images/urban1_2.png) ![Ground Truth](images/urban1_3.png)
 
 ![SAR](/images/urban4_1.png) ![Generated](images/urban4_2.png) ![Ground Truth](images/urban4_3.png)
+
+We first tested the outputs of each of the generators separately i.e., without using the SAR classifier to feed images. Each generator was fed images from their specialized class. The SSIM scores of the 800 test images were plotted using a violin plot to show the distribution of SSIM scores, and also their median. A score of over 0.65 is considered good enough for our model. The horizontal line in the middle of the plot represents the median of the distribution.
+
+![bv1](/images/barren_violin.png) ![gv1](images/grass_violin.png)
+
+![av1](/images/agri_violin.png) ![uv1](images/urban_violin.png)
+
+As we can see, the SSIM distribution of urban areas is not desirable. This is because satellite images of urban areas (Figure 5.4) have an increased amount of detail as compared to other classes, with small objects and their boundaries. Not to mention, some urban areas contain elements of barren, grass and agricultural lands as well. In other words, the complexity of urban images is much greater as compared to images of the rest of the classes.
+
+With the __composite model__, our classifier outputs a probability vector with probabilities assigned to each class for the input SAR image. The image is then fed into the generator of whichever class received the maximum score. Subsequently the SSIM scores and violin plots are generated as per the previous experiment.
+
+![bv1](/images/barren_violin2.png) ![gv1](images/grass_violin2.png)
+
+![av1](/images/agri_violin2.png) ![uv1](images/urban_violin2.png)
+
+We observe that the ends are no longer tapering and there is some bulge in lower range. This is due to the fact that the SAR classifier’s accuracy is 84.16% and some of the images have been misclassified and ended up in the wrong generator.
+
+The most significant observation however, is that of the urban plot. Using the classifier has greatly improved our result with the median being just above 0.6. This confirms our theory of urban images having feature elements from other classes too. With this improvement we do not deem it necessary to increase the complexity of the urban generator model. Although, this could also point towards the refinement of our urban dataset.

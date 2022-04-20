@@ -11,8 +11,28 @@ We decided to segregate the data into four classes and then train separate condi
 
 ## Results
 
-Composite model outputs, in order: Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)
+Composite model outputs, in order: __Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)__
 
 ### Barren Land
 
 ![SAR](/images/barren4_1.png) ![Generated](images/barren4_2.png) ![Ground Truth](images/barren4_3.png)
+
+![SAR](/images/barren5_1.png) ![Generated](images/barren5_2.png) ![Ground Truth](images/barren5_3.png)
+
+### Grassland
+
+![SAR](/images/grass1_1.png) ![Generated](images/grass1_2.png) ![Ground Truth](images/grass1_3.png)
+
+![SAR](/images/grass2_1.png) ![Generated](images/grass2_2.png) ![Ground Truth](images/grass2_3.png)
+
+### Agricultural Land
+
+![SAR](/images/agri1_1.png) ![Generated](images/agri1_2.png) ![Ground Truth](images/agri1_3.png)
+
+![SAR](/images/agri2_1.png) ![Generated](images/agri2_2.png) ![Ground Truth](images/agri2_3.png)
+
+### Urban Area
+
+![SAR](/images/urban1_1.png) ![Generated](images/urban1_2.png) ![Ground Truth](images/urban1_3.png)
+
+![SAR](/images/urban4_1.png) ![Generated](images/urban4_2.png) ![Ground Truth](images/urban4_3.png)

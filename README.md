@@ -1,27 +1,12 @@
 # shr0ud_kill3r
 Generative model to produce optical satellite images from SAR images.
 
-**Latest, best results**
+Cloud cover in satellite images is a major problem, causing either loss of information through obstruction (thick clouds), or blurry effects (semi-transparent/thin clouds). Failure to mask out clouds has a significant negative impact on subsequent analyses such as climate change assessment, land-use classification, crop-land monitoring in agriculture and disaster assessment. Here, we use a Conditional Generative Adversarial Network to leverage the advantages of radar images – which can penetrate cloud cover – and using them to reconstruct or generate corresponding optical (Red, Green and Blue band of visual spectrum) images, which can be easily inspected. We first establish a baseline performance with a benchmark cGAN like pix2pix and then discuss the disadvantages of trying a model-centric approach towards improving the performance and output quality of the model. We then take a data-centric approach and prepare the dataset with a new point of view, segregating it according to land cover type, to take advantage of common features and colour profiles among the images. This leads to a significant improvement in the quality of generated images which we have assessed using the structural similarity index. We then conclude with possible further improvements to our work and comments on the use of our work in the industry.
 
-We selected ~12,000 images, evenly distributed over 4 different types of major
-terrain/regions. Barren land, further divided into 2 classes, pure barren land and
-mixture of barren and urban land; grasslands, further divided into 2 classes, pure
-grasslands and a mixture of grasslands and urban areas; grid, which is agricultural
-land; and urban land, which are images majorly showing rooftops, roadways, narrow
-paths, boundaries etc. This gave us ~2, 000 images per class.
+## Curated Dataset
 
-![barren land](Images/barren.png)<br />
-*barren land*<br />
-![grassland](Images/grass.png)<br />
-![grassland](Images/grass2.png)<br />
-*grasslands*<br />
+We decided to segregate the data into four classes and then train separate conditional GANs specifically on those classes. We searched through images captured during the fall season in the original dataset, and selected images which could belong to each of the four classes: **barren land, grassland, agricultural land, and urban areas**. We selected 4,000 image pairs for each of the four classes, totalling to 16,000 image pairs. We then randomly split them up into training and testing sets, 80% of the images (3,200) in each class for training and the remaining 20% (800) for testing. We made 7 of these random splits using random seeds, trained and tested them, and then averaged out the results.
 
-As can be seen from the images, the model learns and generates images with
-a smaller number of features (barren land, grassland) easily, but highly complex
-images i.e., images with a greater number of features or information per unit area,
-such as urban areas and agricultural land, have not been learnt accurately.
+[Sentinel-1&2 Image Pairs (SAR & Optical)](https://www.kaggle.com/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain)
 
-![urban](Images/urban.png)<br />
-*urban areas*<br />
-![agri](Images/agri.png)<br />
-*agricultural land (grid type)*<br />
+## Results

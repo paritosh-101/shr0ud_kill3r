@@ -15,4 +15,4 @@ Composite model outputs, in order: Sentinel-1 SAR (input), Generated (output), S
 
 ### Barren Land
 
-![SAR](/images/barren4_1.png) ![Generated]("shr0ud_kill3r/images/barren4_2.png") ![Ground Truth]("shr0ud_kill3r/images/barren4_3.png")
+![SAR](/images/barren4_1.png) ![Generated](images/barren4_2.png) ![Ground Truth](images/barren4_3.png)

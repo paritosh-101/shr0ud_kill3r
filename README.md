@@ -11,7 +11,7 @@ We decided to segregate the data into four classes and then train separate condi
 
 ## Results
 
-Composite model (SAR classifier + cGAN) outputs, in order: __Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)__
+Composite model (SAR classifier + cGAN) outputs, in order, left to right: __Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)__
 
 ### Barren Land
 

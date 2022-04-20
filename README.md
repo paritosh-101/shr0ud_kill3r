@@ -10,3 +10,9 @@ We decided to segregate the data into four classes and then train separate condi
 [Sentinel-1&2 Image Pairs (SAR & Optical)](https://www.kaggle.com/datasets/requiemonk/sentinel12-image-pairs-segregated-by-terrain)
 
 ## Results
+
+Composite model outputs, in order: Sentinel-1 SAR (input), Generated (output), Sentinel-2 (ground truth)
+
+### Barren Land
+
+![SAR]("shr0ud_kill3r/images/barren4_1.png") ![Generated]("shr0ud_kill3r/images/barren4_2.png") ![Ground Truth]("shr0ud_kill3r/images/barren4_3.png")

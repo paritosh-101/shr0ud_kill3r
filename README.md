@@ -39,13 +39,9 @@ Composite model (SAR classifier + cGAN) outputs, in order: __Sentinel-1 SAR (inp
 
 We first tested the outputs of each of the generators separately i.e., without using the SAR classifier to feed images. Each generator was fed images from their specialized class. The SSIM scores of the 800 test images were plotted using a violin plot to show the distribution of SSIM scores, and also their median. A score of over 0.65 is considered good enough for our model. The horizontal line in the middle of the plot represents the median of the distribution.
 
-| [bv1](/images/barren_violin.png) | ![gv1](images/grass_violin.png) | 
-|:--:| 
-| Barren Land | Grassland |
+![bv1](/images/barren_violin.png "Barren Land") ![gv1](images/grass_violin.png)
 
-<!-- ![bv1](/images/barren_violin.png) ![gv1](images/grass_violin.png)
-
-![av1](/images/agri_violin.png) ![uv1](images/urban_violin.png) -->
+![av1](/images/agri_violin.png) ![uv1](images/urban_violin.png)
 
 As we can see, the SSIM distribution of urban areas is not desirable. This is because satellite images of urban areas (Figure 5.4) have an increased amount of detail as compared to other classes, with small objects and their boundaries. Not to mention, some urban areas contain elements of barren, grass and agricultural lands as well. In other words, the complexity of urban images is much greater as compared to images of the rest of the classes.
 
